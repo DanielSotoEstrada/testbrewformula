@@ -33,7 +33,7 @@ brew update
 brew tap DanielSotoEstrada/testbrewformula https://github.com/DanielSotoEstrada/testbrewformula.git
 brew install testtree
 
-brew cask install testrancher
+brew install testrancher
 # else
 #     echo "You are not Luis"
 #     echo "I cannot install tree"
