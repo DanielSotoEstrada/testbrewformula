@@ -8,7 +8,7 @@ class Testtree < Formula
     
     
     depends_on "tree"
-    depends_on cask: "rancher"
+    #depends_on cask: "rancher"  Arroja el error: testtree: Unsupported special dependency :cask
     #depends_on "rancher"
 
   
