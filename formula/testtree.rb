@@ -1,4 +1,4 @@
-class IhCore < Formula
+class Testtree < Formula
     VERSION="0.1.12"
     desc "Brew formula for installing tree."
     license "CC BY-NC-ND 4.0"
