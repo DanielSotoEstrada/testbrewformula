@@ -28,6 +28,14 @@ echo "YOUR FULL NAME IS $FNAME and $LNAME"
 if [ "$FNAME" = "Luis" ];
 then
     echo "Excellent Luis"
+    echo "we are going to install tree with brew"
+    brew tap DanielSotoEstrada/testbrewformula https://github.com/DanielSotoEstrada/testbrewformula.git
+    brew install testtree
 else
     echo "You are not Luis"
+    echo "I cannot install tree"
 fi
+
+
+# For execution:
+# /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/DanielSotoEstrada/testbrewformula/main/helloworld.sh)"
