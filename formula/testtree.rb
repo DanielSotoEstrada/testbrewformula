@@ -1,5 +1,5 @@
 class Testtree < Formula
-    VERSION="v1.0.2"
+    VERSION="v1.0.3"
     desc "Brew formula for installing tree."
     homepage "https://github.com/DanielSotoEstrada/testbrewformula"
     license "CC BY-NC-ND 4.0"
@@ -8,7 +8,7 @@ class Testtree < Formula
     
     
     depends_on "tree"
-    #depends_on cask: "rancher"
+    depends_on cask: "rancher"
     #depends_on "rancher"
 
   

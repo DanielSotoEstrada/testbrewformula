@@ -40,3 +40,11 @@ brew install testtree
 
 # For execution:
 # /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/DanielSotoEstrada/testbrewformula/main/helloworld.sh)"
+
+
+# In case we receive "Error: Cannot install in Homebrew on ARM processor in Intel default prefix (/usr/local)"
+# Execute the following:
+
+
+#If we tried to untap a formula that already installed a package we get the message:
+# Refusing to untap danielsotoestrada/testbrewformula because it contains the following installed formulae or casks: testtree
