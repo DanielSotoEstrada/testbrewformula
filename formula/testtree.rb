@@ -8,7 +8,7 @@ class Testtree < Formula
     
     
     depends_on "tree"
-    depends_on cask: "rancher"
+    #depends_on cask: "rancher"
     #depends_on "rancher"
 
   
@@ -17,8 +17,5 @@ class Testtree < Formula
       bin.install Dir["bin/*"]
       (prefix/"VERSION").write VERSION
     end
-  
-  
-    
-  end
+end
   
