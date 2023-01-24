@@ -8,7 +8,8 @@ class Testtree < Formula
     
     
     depends_on "tree"
-    depends_on "rancher"
+    depends_on cask: "rancher"
+    #depends_on "rancher"
 
   
     def install
