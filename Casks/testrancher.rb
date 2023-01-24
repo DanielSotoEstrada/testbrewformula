@@ -1,4 +1,4 @@
-cask "TestRancher" do
+cask "testrancher" do
     version "1.7.0"
     sha256 ":no_check"
       
