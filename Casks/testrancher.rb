@@ -6,4 +6,6 @@ cask "testrancher" do
     name "Rancher Desktop"
     desc "Alternative to Docker Desktop"
     homepage "https://rancherdesktop.io/"
+
+    app	"Rancher Desktop.app"
 end
