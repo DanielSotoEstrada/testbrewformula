@@ -1,13 +1,13 @@
 #!/bin/bash
-echo "Hello World"
+#echo "Hello World"
 
 # For variables we cannot have empty spaces and name should be uppercase
-NAME="Daniel"
-echo "My name is $NAME"
+#NAME="Daniel"
+#echo "My name is $NAME"
 
-SPORT="Base"
+#SPORT="Base"
 # For concatenation (and separate the variable name) we use ${VAR}
-echo "$NAME likes to play ${SPORT}ball"
+#echo "$NAME likes to play ${SPORT}ball"
 
 
 # para inputs  indicamos -p (prompt) y al final indicamos la variable 
@@ -33,7 +33,26 @@ brew update
 brew tap DanielSotoEstrada/testbrewformula https://github.com/DanielSotoEstrada/testbrewformula.git
 brew install testtree
 
-brew install testrancher
+
+echo "Lets try to install Casks Packaes (Rancher Desktop)"
+CASKSUCCEEDED=1
+for _ in 1 2 3; do
+  #brew install ihcask 
+  brew install testrancher
+  CASKSUCCEEDED=$?
+  if [ $CASKSUCCEEDED -eq 0 ]; then
+    break
+  fi
+done
+
+if [ $CASKSUCCEEDED -eq 1 ]; then
+  echo "Install Casks packages failed. Please contact platform support
+in the #developer-platform-support channel in Slack (https://ih-epdd.slack.com/archives/C03GXCDA48Y)."
+  exit 1
+fi
+
+echo "Everything has been installed successfully"
+
 # else
 #     echo "You are not Luis"
 #     echo "I cannot install tree"
