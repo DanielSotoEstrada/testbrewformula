@@ -1,5 +1,5 @@
 class Testtree < Formula
-    VERSION="v1.0.11"
+    VERSION="v1.0.12"
     desc "Brew formula for installing tree."
     homepage "https://github.com/DanielSotoEstrada/testbrewformula"
     license "CC BY-NC-ND 4.0"

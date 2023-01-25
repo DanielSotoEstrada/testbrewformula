@@ -38,7 +38,7 @@ echo "Lets try to install Casks Packaes (Rancher Desktop)"
 CASKSUCCEEDED=1
 for _ in 1 2 3; do
   #brew install ihcask 
-  brew install testrancher
+  brew install ih-rancher
   CASKSUCCEEDED=$?
   if [ $CASKSUCCEEDED -eq 0 ]; then
     break
@@ -69,3 +69,7 @@ echo "Everything has been installed successfully"
 
 #If we tried to untap a formula that already installed a package we get the message:
 # Refusing to untap danielsotoestrada/testbrewformula because it contains the following installed formulae or casks: testtree
+
+
+# Documentacion del filename
+#https://docs.brew.sh/Cask-Cookbook#header-line-details
