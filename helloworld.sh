@@ -35,23 +35,23 @@ brew install testtree
 
 
 echo "Lets try to install Casks Packaes (Rancher Desktop)"
-CASKSUCCEEDED=1
-for _ in 1 2 3; do
-  #brew install ihcask 
-  brew reinstall ih-rancher
-  CASKSUCCEEDED=$?
-  if [ $CASKSUCCEEDED -eq 0 ]; then
-    break
-  fi
-done
+# CASKSUCCEEDED=1
+# for _ in 1 2 3; do
+#   #brew install ihcask 
+#   brew reinstall ih-rancher
+#   CASKSUCCEEDED=$?
+#   if [ $CASKSUCCEEDED -eq 0 ]; then
+#     break
+#   fi
+# done
 
-if [ $CASKSUCCEEDED -eq 1 ]; then
-  echo "Install Casks packages failed. Please contact platform support
-in the #developer-platform-support channel in Slack (https://ih-epdd.slack.com/archives/C03GXCDA48Y)."
-  exit 1
-fi
+# if [ $CASKSUCCEEDED -eq 1 ]; then
+#   echo "Install Casks packages failed. Please contact platform support
+# in the #developer-platform-support channel in Slack (https://ih-epdd.slack.com/archives/C03GXCDA48Y)."
+#   exit 1
+# fi
 
-echo "Everything has been installed successfully"
+# echo "Everything has been installed successfully"
 
 # else
 #     echo "You are not Luis"
@@ -73,3 +73,30 @@ echo "Everything has been installed successfully"
 
 # Documentacion del filename
 #https://docs.brew.sh/Cask-Cookbook#header-line-details
+FILEDIR="$PWD/Casks/io.rancherdesktop.profile.defaults.plist"
+
+cp FILEDIR ~/Library/Preferences/io.rancherdesktop.profile.defaults.plist
+CASKSUCCEEDED=1
+# Installation and configuration of Rancher Desktop
+for _ in 1 2 3; do
+  # Detect Rosetta
+  if [[ $(sysctl -n sysctl.proc_translated) -eq 1 ]]; then
+    # Rosetta  Active
+    arch -arm64 -c brew install ih-rancher
+  else
+    brew install ih-rancher
+  fi
+
+  CASKSUCCEEDED=$?
+  if [ $CASKSUCCEEDED -eq 0 ]; then
+    break
+  fi
+done
+
+ # EL rm despues del start
+rm -rf ~/.rd
+$(/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/rdctlrdctl start)
+
+# Check for docker binary in /usr/local/bin
+# Check if /usr/local/bin/docker exists
+echo "Rancher Desktop has been installed successfully"
