@@ -38,7 +38,7 @@ echo "Lets try to install Casks Packaes (Rancher Desktop)"
 CASKSUCCEEDED=1
 for _ in 1 2 3; do
   #brew install ihcask 
-  brew install ih-rancher
+  brew reinstall ih-rancher
   CASKSUCCEEDED=$?
   if [ $CASKSUCCEEDED -eq 0 ]; then
     break
