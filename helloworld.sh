@@ -100,7 +100,8 @@ done
 
  # EL rm despues del start
 rm -rf ~/.rd
-$(/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/rdctlrdctl start)
+$(/Users/dsoto/.rd/bin/rdctl start)
+#/Users/dsoto/.rd/bin
 
 # Check for docker binary in /usr/local/bin
 # Check if /usr/local/bin/docker exists
