@@ -88,7 +88,9 @@ fi
 echo "This are the files:"
 echo $(ls)
 
-cp "/Users/dsoto/src/test/bash/Casks/io.rancherdesktop.profile.defaults.plist" "~/Library/Preferences/io.rancherdesktop.profile.defaults.plist"
+#cp "/Users/dsoto/src/test/bash/Casks/io.rancherdesktop.profile.defaults.plist" "~/Library/Preferences/"
+cp "$HOME/src/test/bash/Casks/io.rancherdesktop.profile.defaults.plist" "$HOME/Library/Preferences/"
+
 CASKSUCCEEDED=1
 # Installation and configuration of Rancher Desktop
 for _ in 1 2 3; do
