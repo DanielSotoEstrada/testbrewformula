@@ -77,6 +77,14 @@ echo "Lets try to install Casks Packaes (Rancher Desktop)"
 FILEDIR="/Users/dsoto/src/test/bash/Casks/io.rancherdesktop.profile.defaults.plist"
 echo " THIS IS THE FILE"
 echo $FILEDIR
+
+if test -f "$FILEDIR"; then
+    echo "$FILE exists."
+else
+    echo "$FILE NO EXISTS."
+fi
+
+
 echo "This are the files:"
 echo $(ls)
 
@@ -100,7 +108,7 @@ done
 
  # EL rm despues del start
 rm -rf ~/.rd
-$(/Users/dsoto/.rd/bin/rdctl start)
+$(~/../../Applications/Rancher\ Desktop.app/Contents/Resources/resources/darwin/bin/rdctl start)
 #/Users/dsoto/.rd/bin
 
 # Check for docker binary in /usr/local/bin
