@@ -73,10 +73,10 @@ echo "Lets try to install Casks Packaes (Rancher Desktop)"
 
 # Documentacion del filename
 #https://docs.brew.sh/Cask-Cookbook#header-line-details
-FILEDIR="$PWD/Casks/io.rancherdesktop.profile.defaults.plist"
-
-echo " THIS IS _THE DIR"
-echo $PWD
+#FILEDIR="$PWD/Casks/io.rancherdesktop.profile.defaults.plist"
+FILEDIR="/Users/dsoto/src/test/bash/Casks/io.rancherdesktop.profile.defaults.plist"
+echo " THIS IS THE FILE"
+echo $FILEDIR
 echo "This are the files:"
 echo $(ls)
 
@@ -104,4 +104,4 @@ $(/Applications/Rancher Desktop.app/Contents/Resources/resources/darwin/bin/rdct
 
 # Check for docker binary in /usr/local/bin
 # Check if /usr/local/bin/docker exists
-echo "Rancher Desktop has been installed successfully"
+echo "Rancher Desktop has been installed successfully and should be starting"
