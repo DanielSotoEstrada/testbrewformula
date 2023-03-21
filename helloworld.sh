@@ -88,7 +88,7 @@ fi
 echo "This are the files:"
 echo $(ls)
 
-cp "FILEDIR" ~/Library/Preferences/io.rancherdesktop.profile.defaults.plist
+cp $FILEDIR "~/Library/Preferences/io.rancherdesktop.profile.defaults.plist"
 CASKSUCCEEDED=1
 # Installation and configuration of Rancher Desktop
 for _ in 1 2 3; do
