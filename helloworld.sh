@@ -114,6 +114,14 @@ rm -rf ~/.rd
 $(/Applications/Rancher\ Desktop.app/Contents/Resources/resources/darwin/bin/rdctl start)
 #/Users/dsoto/.rd/bin
 
-# Check for docker binary in /usr/local/bin
+# TEST
 # Check if /usr/local/bin/docker exists
-echo "Rancher Desktop has been installed successfully and should be starting"
+
+echo "LETS TEST!"
+
+PLISTFILE="$HOME/Library/Preferences/io.rancherdesktop.profile.defaults.plist"
+if [ -f "$PLISTFILE" ]; then
+  echo "Rancher Desktop has been installed successfully and should be starting."
+else
+  echo "El archivo no se pudo encontrar"
+fi
